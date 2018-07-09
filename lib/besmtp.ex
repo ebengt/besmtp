@@ -25,7 +25,14 @@ defmodule Besmtp do
     {r, port} = System.get_env("smtp") |> String.split(":") |> mailman_context_relay_port(p)
 
     %Mailman.Context{
-      config: %Mailman.SmtpConfig{relay: r, username: user, password: p, port: port, auth: a, tls: t}
+      config: %Mailman.SmtpConfig{
+        relay: r,
+        username: user,
+        password: p,
+        port: port,
+        auth: a,
+        tls: t
+      }
     }
   end
 
@@ -78,6 +85,7 @@ defmodule Besmtp do
 
   defp main_private_deliver(email) do
     {:ok, d} = mailman_deliver(email, mailman_context())
+
     # Mailman.Email.parse! => :load_failed, 'Failed to load NIF library: \'priv/eiconv_nif.so: cannot open shared object file: No such file or directory\''
     # email = Mailman.Email.parse!(d)
     # email.delivery for Date:
