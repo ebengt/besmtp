@@ -16,22 +16,19 @@ defmodule Besmtp do
   def mailman_deliver(email, context), do: Mailman.deliver(email, context)
 
   def mailman_context do
-    user = System.get_env("from")
-
+    f = System.get_env("from")
     p = System.get_env("password")
-    a = mailman_context_auth(p)
-    t = mailman_context_tls(p)
 
     {r, port} = System.get_env("smtp") |> String.split(":") |> mailman_context_relay_port(p)
 
     %Mailman.Context{
       config: %Mailman.SmtpConfig{
         relay: r,
-        username: user,
+        username: f,
         password: p,
         port: port,
-        auth: a,
-        tls: t
+        auth: mailman_context_auth(p),
+        tls: mailman_context_tls(p)
       }
     }
   end
