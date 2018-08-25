@@ -95,5 +95,5 @@ defmodule Besmtp do
 
   defp read_infile({to, subject, infile}), do: {to, subject, File.read!(infile)}
 
-  defp usage, do: IO.puts("#{:escript.script_name()}" <> @moduledoc)
+  defp usage, do: IO.puts("#{:escript.script_name()}" <> " " <> @moduledoc)
 end
