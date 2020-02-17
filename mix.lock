@@ -1,7 +1,7 @@
 %{
-  "eiconv": {:hex, :eiconv, "1.0.0", "ee1e47ee37799a05beff7a68d61f63cccc93101833c4fb94b454c23b12a21629", [:rebar3], [], "hexpm"},
-  "gen_smtp": {:hex, :gen_smtp, "0.12.0", "97d44903f5ca18ca85cb39aee7d9c77e98d79804bbdef56078adcf905cb2ef00", [:rebar3], [], "hexpm"},
-  "httpotion": {:hex, :httpotion, "3.0.3", "17096ea1a7c0b2df74509e9c15a82b670d66fc4d66e6ef584189f63a9759428d", [:mix], [{:ibrowse, "~> 4.4", [hex: :ibrowse, repo: "hexpm", optional: false]}], "hexpm"},
-  "ibrowse": {:hex, :ibrowse, "4.4.0", "2d923325efe0d2cb09b9c6a047b2835a5eda69d8a47ed6ff8bc03628b764e991", [:rebar3], [], "hexpm"},
-  "mailman": {:git, "https://github.com/mailman-elixir/mailman.git", "7c20dadc6460983875565ee3a27f0e67234efbb3", []},
+  "eiconv": {:hex, :eiconv, "1.0.0", "ee1e47ee37799a05beff7a68d61f63cccc93101833c4fb94b454c23b12a21629", [:rebar3], [], "hexpm", "8c80851decf72fc4571a70278d7932e9a87437770322077ecf797533fbb792cd"},
+  "gen_smtp": {:hex, :gen_smtp, "0.14.0", "39846a03522456077c6429b4badfd1d55e5e7d0fdfb65e935b7c5e38549d9202", [:rebar3], [], "hexpm", "d32d796c947fa35dc5e8f20706877bb8c8584b16c4eedf3315083f983959d82b"},
+  "httpotion": {:hex, :httpotion, "3.1.3", "fdaf1e16b9318dcb722de57e75ac368c93d4c6e3c9125f93e960f953a750fb77", [:mix], [{:ibrowse, "== 4.4.0", [hex: :ibrowse, repo: "hexpm", optional: false]}], "hexpm", "e420172ef697a0f1f4dc40f89a319d5a3aad90ec51fa424f08c115f04192ae43"},
+  "ibrowse": {:hex, :ibrowse, "4.4.0", "2d923325efe0d2cb09b9c6a047b2835a5eda69d8a47ed6ff8bc03628b764e991", [:rebar3], [], "hexpm", "6a8e5988872086f0506bef68311493551ac5beae7c06ba2a00d5e9f97a60f1c2"},
+  "mailman": {:git, "https://github.com/mailman-elixir/mailman.git", "7c1705039cb124a1e84b41a1f6b3625169727b0e", []},
 }
