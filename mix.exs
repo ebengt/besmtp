@@ -15,14 +15,14 @@ defmodule Besmtp.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :eex]
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:mailman, github: "mailman-elixir/mailman"}
+      {:mailman, "~> 0.4"}
     ]
   end
 end

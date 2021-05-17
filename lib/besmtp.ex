@@ -77,8 +77,10 @@ defmodule Besmtp do
 
   defp main_private(:help), do: usage()
 
-  defp main_private(args),
-    do: args |> read_infile |> mailman_email |> main_private_deliver
+  defp main_private(args) do
+    Logger.configure(level: :warn)
+    args |> read_infile |> mailman_email |> main_private_deliver
+  end
 
   defp main_private_deliver(email) do
     {:ok, d} = mailman_deliver(email, mailman_context())
